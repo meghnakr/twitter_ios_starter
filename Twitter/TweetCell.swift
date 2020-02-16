@@ -50,7 +50,6 @@ class TweetCell: UITableViewCell {
     }
     
     @IBAction func retweet(_ sender: Any) {
-        print("Here 1")
         if(!retweeted) {
             TwitterAPICaller.client?.retweetTweet(tweetId: tweetId, success: {
                 self.setRetweeted(true)
